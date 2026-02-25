@@ -159,4 +159,5 @@ function padZero(num) {
 // Start the countdown timer when the page loads
 window.onload = startCountdown;
 
+
 StartGame();
