@@ -1,0 +1,144 @@
+@keyframes slideIn {
+  from {
+    transform: translateY(-200px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+   @keyframes   animationName {
+                      
+    0% { background-position: 0% 50%; }
+                      
+    50% { background-position: 100% 50%; }
+                      
+    100% { background-position: 0% 50%; }
+                    
+  }
+  @keyframes fadeIn {
+  
+  from{
+  opacity: 0;
+  }
+  to{
+  opacity: 1;
+  }
+  }
+    
+  
+
+:root {
+  background-color: #fc9105ce;
+  background-size: 400% 400%;
+  animation: animationName 10s ease infinite;
+ 
+  }
+
+
+*{
+  box-sizing : border-box ;
+  font-family : Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  color :#333;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom : 1rem;
+}
+h1 {
+
+
+font-size: 5.4rem;
+color: #000000;
+margin-bottom: 5rem;
+}
+h1 > span  {
+font-size: 2.4rem;
+font-weight: 500;
+}
+
+h2 {
+  font-size: 4.2rem;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+/* utilities*/
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding : 2rem;
+
+}
+.container > * {
+  width: 100%;
+}
+.flex-column {
+display: flex;
+flex-direction: column;
+}
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+.text-center {
+  text-align: center;
+}
+.hidden {
+  display: none;
+}
+/*buttons*/
+.btn {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+  width: 20rem;
+  text-align: center;
+  border: 0.5rem solid #976f00;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color : #000000;
+  background-color: #ffa600;
+  border-radius: 25px;
+  
+}
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 #8b4300b0;
+  transform: translate(-0.1rem);
+  transition: transform 150ms;
+}
+.btn:active {
+  background-color: #ffbb00;
+  box-shadow: 0 5px #8b4300b0;
+  transform: translateY(4px);
+}
+.btn [disabled]:hover {
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+img
+{
+    animation: fadeIn 2.5s ease-in 0s 1 normal both;    
+    padding: 5px;
+    width: 20rem;
+    align-self: center;
+   transition: transform 0.1s    
+  }
+

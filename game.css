@@ -1,0 +1,203 @@
+
+:root {
+    background:url(bg2.jpg);
+    background-size: 100% 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: px;
+    border:solid 15px #01b9c3;
+    aspect-ratio: 8/1;
+    margin-top: -30px;
+  
+}
+/* Question and items */ 
+.container {
+
+  width: 70%;
+  aspect-ratio: 2/1;
+}        
+
+#question {
+  display:inline-block;
+  position:relative;
+  color: #bcf3fa;
+  font-weight: 80;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 20px 10%;
+  text-align: center;
+  clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
+  background-color: #01b9c3;
+  background-image: radial-gradient(200% 70% at center 20%, rgb(18, 48, 58) -30%, rgb(13, 54, 61) 49%, rgb(8, 32, 36) 50%, rgb(12, 32, 37) 150%);
+  background-repeat: no-repeat;
+  font-family: fantasy;
+  font-size: 25px;
+  width: 500px;
+  height: 100px;
+  align-self: center;
+  margin-top: -50px;
+  margin-bottom: 5px;
+
+}      
+
+.choice-container {
+    display:inline-block;
+    position: relative;
+    color: #fff;
+    font-weight: 5;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 25px;
+    text-align: center;
+    clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
+    background-color: #ffffff;
+    background-image: radial-gradient(200% 70% at center 20%, rgb(148, 209, 230) -30%, rgb(47, 186, 211) 49%, rgb(16, 66, 75) 50%, rgb(121, 185, 201) 150%);
+    background-repeat: no-repeat;
+    padding: 10px 5%;
+    width: 300px;
+    height: 70px;
+    margin-bottom: 8px;
+    align-self: center;
+    -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  }
+
+  .choice-container:hover {
+    box-shadow: 0 0 40px 40px #1eeefda8 inset;
+    transform: translateY(-0.25em);
+    animation: ease-in;
+  }
+  .choice-container:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    
+  }
+.correct {
+    background-image: radial-gradient(200% 70% at center 20%, rgb(148, 230, 155) -30%, rgb(74, 211, 47) 49%, rgb(16, 75, 16) 50%, rgb(121, 201, 125) 150%);
+  
+  }
+.correct:hover {
+    box-shadow: 0 0 40px 40px #52fd1ea8 inset;
+    transform: translateY(-0.25em);
+    animation: ease-in;
+  }
+.incorrect {
+    background-image: radial-gradient(200% 70% at center 20%, rgb(230, 148, 148) -30%, rgb(211, 47, 47) 49%, rgb(75, 16, 16) 50%, rgb(201, 121, 121) 150%);
+  }
+.incorrect:hover {
+    box-shadow: 0 0 40px 40px #fd1e1ea8 inset;
+    transform: translateY(-0.25em);
+    animation: ease-in;
+  }
+.choice-text {
+    color: #acfbfd;
+    font-family: fantasy;
+    z-index: 1;
+    padding-top: 30px;
+    font-size: 20px;
+
+  }
+.choice-prefix {
+    color: rgb(5, 84, 104);
+    display: block;
+    font-family: fantasy;
+    pointer-events: none;
+    height: 0;
+    font-size: 20px;
+    
+  }
+  
+  /*HUD*/
+#hud {
+    display: flex;
+    justify-content: space-between; 
+   
+}
+.hud-prefix {
+    text-align: center;
+    font-size: 1rem;
+    color:rgb(0, 0, 0);
+    align-self: auto;
+}
+.hud-main-text {
+    text-align: center;
+    color:rgb(0, 0, 0);
+    align-self: auto;
+
+}
+
+#time {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    font-family: fantasy;
+    align-self: auto;
+    position: relative;
+    left: 105px;
+    
+}
+#score {
+  font-family: fantasy;
+  font-size: 40px;
+}
+   
+.hud-prefix {
+  position: relative;
+  display: block;
+  background: transparent;
+  width: 300px;
+  height: 35px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #01b9c3;
+  margin: 40px auto;
+  font-family: fantasy;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+   
+.hud-prefix:before,
+.hud-prefix:after {
+position: absolute;
+content: '';
+width: 300px;
+left: 0px;
+height: 34px;
+z-index: -1;
+}
+    .hud-prefix:before {
+  transform: perspective(15px) rotateX(3deg);
+}
+    .hud-prefix:after {
+  top: 40px;
+  transform: perspective(15px) rotateX(-3deg);
+}
+
+.hud-prefix:before,
+.hud-prefix:after {
+  border: 4px solid #01b9c3;
+}
+.hud-prefix:before {
+  border-bottom: none; /* to prevent the border-line showing up in the middle of the shape */
+}
+.hud-prefix:after {
+  border-top: none; /* to prevent the border-line showing up in the middle of the shape */
+}
+
+/* Button hover styles */
+
+.hud-prefix:hover:before,
+.hud-prefix:hover:after {
+  background: #01b9c3;
+}
+.hud-prefix:hover {
+  color: #fff;
+}
+.logo {
+  position: fixed ;
+  left: 70px;
+  bottom: -110px;
+  size: 20px 20px;
+}

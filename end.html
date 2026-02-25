@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finale</title>
+    <link rel="stylesheet" href="end.css" />
+    <script src="game.js"></script>
+</head>
+<body>
+<div class="container">
+    <div id="end" class="flex-center flex-column">
+        <img src="sesx.png" alt="logo">    
+        <h1>Congratulations!</h1>
+        <h2 id="finalScore"></h2>
+        <form>
+        
+            <input
+            autocomplete="on"
+            type="text"
+            name="username"
+            id="username"
+            placeholder="username"
+            />
+            <input 
+            autocomplete="on"
+            type="text"
+            name="Email"
+            id="Email"
+            placeholder="E-mail"
+            />
+    <button 
+       type="submit" 
+       class="btn" 
+       id="saveScoreBtn"
+       onclick="saveHighScore(event)"
+       disabled
+       >
+       Save
+    </button>
+        </form>
+    </div>
+</div>
+<script src="end.js"></script>
+</body>
+</html>
